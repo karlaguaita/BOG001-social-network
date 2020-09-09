@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+:root {
+  --font-placeholder: "Questrial", sans-serif;
+  --font-slogan: "Pacifico", cursive;
+  --color-button: #1a5445;
+  --color-input: #e3e3e3;
+  --color-placeholder: #a89d9d;
+  --color-google: #df4b4b;
+  --font-button-input: #ffffff;
+  --font-link: #3b4ac9;
+  --color-border: #000000;
+}
+html,
+body {
+  height: auto;
+  margin: 0px;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  height: auto;
+}
+
+main {
+  width: 100%;
+}
+
+#sectionLogin{
+  display: none;
+}
+
+#sectionSignin{
+  display: none;
+}
+
+.logo {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  display: flex;
+  width: 35%;
+  height: 35%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: var(--font-placeholder);
+  color: var(--color-button);
+  margin: 0;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 20px;
+  font-family: var(--font-slogan);
+}
+
+.input-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4%;
+}
+
+.input-login input {
+  width: 65%;
+  background-color: var(--color-input);
+  border-radius: 25px;
+  border-style: none;
+  padding: 7px;
+  margin-top: 8px;
+}
+
+.input-login input::placeholder {
+  color: var(--color-placeholder);
+  padding-left: 13px;
+  font-family: var(--font-placeholder);
+}
+
+#warnUser {
+  color: var(--color-google);
+  display: flex;
+  justify-content: center;
+}
+
+#warnNoExist {
+  color: var(--color-google);
+  display: flex;
+  justify-content: center;
+}
+
+.button-sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-placeholder);
+  margin: 0;
+}
+
+.button-sign button {
+  width: 69%;
+  background-color: var(--color-google);
+  color: var(--font-button-input);
+  border-radius: 25px;
+  border-style: none;
+  padding: 7px;
+}
+
+.button-sign button:first-child {
+  background-color: var(--color-button);
+}
+
+.button-sign p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.button-sign a {
+  margin-top: 3%;
+  color: var(--font-link);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: var(--color-input);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-bar {
+  width: 100%;
+  background-color: var(--color-button);
+  padding: 10px 0 5px 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 0 0;
+}
+
+.footer-bar a {
+  color: var(--color-input);
+  text-decoration: none;
+}
+
+.footer-bar p {
+  margin: 5px 0;
+}
+
+@media only screen and (min-height: 768px) {
+  
+  .logo {
+    margin-top: 25%;
+  }
+
+  .input-login input {
+    width: 70%;
+    padding: 12px;
+    margin-top: 9px;
+  }
+
+  .input-login input::placeholder {
+    font-size: 16px;
+  }
+
+  .button-sign button {
+    width: 76%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .button-sign a {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-height: 880px) {
+  body {
+    background-image: url(img/background-web3.jpg);
+  }
+
+  .logo {
+    margin-top: 15%;
+  }
+
+  .logo img {
+    width: 25%;
+    height: 25%;
+  }
+
+  .logo h1 {
+    font-size: 50px;
+  }
+
+  .logo p {
+    margin-top: -10px;
+    font-size: 30px;
+  }
+
+  .input-login input {
+    width: 50%;
+    padding: 15px;
+    margin-top: 10px;
+    border: var(--color-border) 1px solid;
+  }
+
+  .input-login input::placeholder {
+    font-size: 20px;
+  }
+
+  #warnUser {
+    font-size: 20px;
+  }
+
+  #warnNoExist {
+    font-size: 20px;
+  }
+  .button-sign button {
+    width: 54%;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .button-sign p {
+    font-size: 25px;
+  }
+
+  .button-sign a {
+    font-size: 25px;
+  }
+
+  .footer-bar a {
+    font-size: 23px;
+  }
+
+  .footer-bar p {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background-image: url(img/background-web3.jpg);
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-top: 20%;
+  }
+
+  .logo img {
+    width: 25%;
+    height: 25%;
+  }
+
+  .logo h1 {
+    font-size: 50px;
+  }
+
+  .logo p {
+    font-size: 30px;
+  }
+
+  .input-login input {
+    width: 45%;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  .input-login input::placeholder {
+    font-size: 25px;
+  }
+
+  #warnUser {
+    font-size: 23px;
+  }
+
+  #warnNoExist {
+    font-size: 23px;
+  }
+
+  .button-sign button {
+    width: 49%;
+    padding: 15px;
+    font-size: 25px;
+  }
+
+  .button-sign p {
+    font-size: 40px;
+  }
+
+  .button-sign a {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .logo {
+    margin-top: 2%;
+  }
+
+  .logo img {
+    width: 8%;
+    height: 8%;
+  }
+
+  .logo h1 {
+    font-size: 35px;
+  }
+
+  .logo p {
+    font-size: 25px;
+  }
+
+  .input-login {
+    margin-top: 1%;
+  }
+
+  .input-login input {
+    width: 30%;
+    padding: 8px;
+    margin-top: 8px;
+    border: var(--color-border) 1px solid;
+  }
+
+  .input-login input::placeholder {
+    font-size: 13px;
+  }
+
+  #warnUser {
+    font-size: 13px;
+  }
+
+  #warnNoExist {
+    font-size: 13px;
+  }
+
+  .button-sign button {
+    width: 31%;
+    padding: 9px;
+    font-size: 12px;
+  }
+
+  .button-sign p {
+    font-size: 18px;
+  }
+
+  .button-sign a {
+    margin-top: 1%;
+    font-size: 16px;
+  }
+}

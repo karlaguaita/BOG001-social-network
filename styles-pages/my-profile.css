@@ -1,0 +1,568 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+:root {
+  --font-placeholder: "Questrial", sans-serif;
+  --font-slogan: "Pacifico", cursive;
+  --color-button: #1a5445;
+  --color-input: #e3e3e3;
+  --color-placeholder: #a89d9d;
+  --color-google: #df4b4b;
+  --font-button-input: #ffffff;
+  --font-link: #3b4ac9;
+  --color-background: #f3f3f3;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  height: auto;
+  font-family: var(--font-placeholder);
+  background-color: var(--color-background);
+}
+
+.my-profile-view {
+  background-color: var(--color-background);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-profile img {
+  width: 15%;
+  height: 5%;
+  margin: 10px 72px 4px 25px;
+}
+
+.header-profile h1 {
+  font-size: 22px;
+  color: var(--color-button);
+  font-weight: lighter;
+}
+
+.user-head-profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  width: 55%;
+  justify-content: space-between;
+}
+
+.user-head-profile img {
+  width: 180px;
+  height: 180px;
+  border-radius: 55%;
+}
+
+.user-head-profile span {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.card-post-container-profile {
+  display: flex;
+  width: 90%;
+  margin: 10px 0 10px 0;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-card {
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.header-card img {
+  width: 90vw;
+  display: flex;
+  border-radius: 25px 25px 0 0;
+  max-height: 250px;
+  max-width: 350px;
+}
+
+#descriptionCardDate {
+  text-align: right;
+}
+
+.header-card p {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-button);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.description-card {
+  background: #fbfbfb;
+  padding: 10px;
+}
+
+.header-card,
+.description-card {
+  text-align: justify;
+  border-radius: 0px 0px 25px 25px;
+}
+
+.container-like {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-unlike {
+  border: none;
+  background: none;
+}
+
+.btn-like {
+  border: none;
+  background: none;
+}
+
+.like-off {
+  width: 20px;
+  height: 20px;
+}
+
+.like-on {
+  width: 20px;
+  height: 20px;
+}
+
+.container-like p {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.button-crud {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-crud {
+  display: flex;
+  border: none;
+  background: none;
+}
+
+.pencil-crud {
+  width: 23px;
+  height: 23px;
+}
+
+.edit-button {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-placeholder);
+  width: 100px;
+  border-radius: 25px;
+  border-style: none;
+  background-color: #e3c285;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.87);
+  margin-left: 15px;
+  padding-left: 29px;
+}
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-placeholder);
+  width: 100px;
+  border-radius: 25px;
+  border-style: none;
+  background-color: #e3c285;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.87);
+  padding-left: 29px;
+}
+
+.modal-container {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.32);
+}
+
+.modal {
+  display: flex;
+  width: 80%;
+  height: 20%;
+  background: #ffffff;
+  flex-direction: column;
+  margin-top: 70%;
+  align-content: center;
+  border-radius: 25px;
+  position: relative;
+}
+
+.modal h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  color: var(--color-button);
+}
+
+.modal-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.modal-container-edit {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 220vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modalEdit {
+  display: flex;
+  width: 80%;
+  height: 20%;
+  background: #ffffff;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50%;
+  align-content: center;
+  border-radius: 25px;
+  position: relative;
+}
+
+.modalEdit h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  color: var(--color-button);
+}
+
+.place-edit-post {
+  background-color: var(--color-input);
+  font-family: var(--font-placeholder);
+  padding: 0px 25px 0px 25px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  height: 25px;
+  width: 200px;
+  border-style: none;
+}
+
+.description-edit-post {
+  background-color: var(--color-input);
+  font-family: var(--font-placeholder);
+  border-style: none;
+  white-space: initial;
+  padding: 0px 25px 0px 25px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  height: 100px;
+  width: 200px;
+}
+
+#imgChosse {
+  margin-bottom: 20px;
+}
+
+.cancel-button {
+  display: flex;
+  background-color: var(--color-button);
+  font-family: var(--font-placeholder);
+  border-style: none;
+  border-radius: 20px;
+  margin-left: 10px;
+  height: 35px;
+  width: 100px;
+  padding: 10px 25px;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.confirm-button {
+  display: flex;
+  background-color: var(--color-google);
+  font-family: var(--font-placeholder);
+  border-style: none;
+  border-radius: 20px;
+  margin-left: 10px;
+  height: 35px;
+  width: 100px;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+@media only screen and (min-height: 768px) {
+  body {
+    background-image: url(img/background-web3.jpg);
+  }
+  
+  .header-profile img {
+    border-radius: 10px 91px 4px 25px;
+  }
+
+  .header-card,
+  .description-card {
+    font-size: 20px;
+  }
+
+  .like-on {
+    width: 25px;
+    height: 25px;
+  }
+
+  .like-off {
+    width: 25px;
+    height: 25px;
+  }
+
+  .pencil-crud {
+    width: 30px;
+    height: 30px;
+  }
+
+  .container-like p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-height: 880px) {
+  body {
+    width: 100%;
+  }
+
+  .my-profile-view {
+    background-color: var(--color-background);
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .header-profile img {
+    width: 10%;
+    margin: 10px 180px 4px 25px;
+  }
+
+  .header-profile h1 {
+    font-size: 28px;
+  }
+
+  .user-head-profile img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+  }
+
+  .user-head-profile span {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+  .header-card img {
+    width: 100%;
+    max-height: 450px;
+    max-width: 650px;
+  }
+
+  .header-card,
+  .description-card {
+    font-size: 20px;
+  }
+  .like-on {
+    width: 30px;
+    height: 30px;
+  }
+
+  .like-off {
+    width: 30px;
+    height: 30px;
+  }
+
+  .container-like p {
+    font-size: 20px;
+  }
+
+  .delete-button {
+    width: 150px;
+    margin-left: 30px;
+    padding-left: 51px;
+    font-size: 16px;
+  }
+
+  .edit-button {
+    width: 150px;
+    margin-left: 30px;
+    padding-left: 61px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    display: flex;
+    width: 100%;
+  }
+
+  .my-profile-view {
+    background-color: var(--color-background);
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .header-profile img {
+    width: 15%;
+    margin: 10px 180px 4px 25px;
+  }
+
+  .header-profile h1 {
+    font-size: 32px;
+  }
+
+  .user-head-profile img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+
+  .user-head-profile span {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 35px;
+  }
+
+  .header-card img {
+    width: 100%;
+    max-height: 650px;
+    max-width: 750px;
+  }
+
+  .header-card,
+  .description-card {
+    font-size: 20px;
+  }
+  .like-on {
+    width: 35px;
+    height: 35px;
+  }
+
+  .like-off {
+    width: 35px;
+    height: 35px;
+  }
+
+  .container-like p {
+    font-size: 24px;
+  }
+
+  .pencil-crud {
+    width: 40px;
+    height: 40px;
+  }
+  .delete-button {
+    width: 180px;
+    margin-left: 85px;
+  }
+
+  .edit-button {
+    width: 180px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .my-profile-view {
+    background-color: var(--color-background);
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .header-profile img {
+    width: 10%;
+    margin: 10px 280px 4px 25px;
+  }
+
+  .header-profile h1 {
+    font-size: 24px;
+  }
+
+  .user-head-profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  .user-head-profile span {
+    font-size: 22px;
+  }
+
+  .header-card img {
+    width: 100%;
+    max-height: 580px;
+    max-width: 700px;
+  }
+
+  .card-post-container-profile {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+
+  .header-card,
+  .description-card {
+    font-size: 16px;
+  }
+  .like-on {
+    width: 25px;
+    height: 25px;
+  }
+
+  .like-off {
+    width: 25px;
+    height: 25px;
+  }
+
+  .container-like p {
+    font-size: 16px;
+  }
+
+  .pencil-crud {
+    width: 28px;
+    height: 28px;
+  }
+
+  .edit-button {
+    padding-left: 78px;
+  }
+
+  .delete-button {
+    padding-left: 76px;
+  }
+}

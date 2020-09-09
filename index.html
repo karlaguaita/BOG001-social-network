@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="styles-pages/form-view.css" />
+  <link rel="stylesheet" href="styles-pages/post.css" />
+  <link rel="stylesheet" href="styles-pages/timeline.css" />
+  <link rel="stylesheet" href="styles-pages/404.css" />
+  <link rel="stylesheet" href="styles-pages/my-profile.css" />
+  <link rel="stylesheet" href="styles-pages/menu.css" />
+  <link rel="stylesheet" href="styles-pages/loading-gif.css" />
+</head>
+
+<body>
+  <header id="header" class="header">
+    <div class="logo">
+      <img src="img/Logo.png" alt="Terra Tour" />
+      <h1>TERRA TOUR</h1>
+      <p>Tourism by your side</p>
+    </div>
+  </header>
+  <main>
+    <!--Registro-->
+    <section id="sectionLogin">
+      <div id="formLogin">
+        <div class="input-login">
+          <input id="user" type="text" placeholder="Username" required autocomplete="off" />
+          <input id="email" type="email" placeholder="Email" required autocomplete="off" />
+          <input id="password" type="password" placeholder="Password" required autocomplete="off" />
+          <input id="confirm" type="password" placeholder="Confirm Password" required autocomplete="off" />
+        </div>
+        <p id="warnUser"></p>
+        <div class="button-sign">
+          <button type="submit" class="signin" id="signin">Sign in</button>
+          <p>ó</p>
+          <button type="submit" id="signGoogle" class="sign-google">
+            Sign in with Google
+          </button>
+          <a id="loginView" href="#">Login</a>
+        </div>
+      </div>
+    </section>
+    <!--Fin registro-->
+
+    <!--Inicio de sesión-->
+    <section id="sectionSignin">
+      <div id="formSignin">
+        <div class="input-login">
+          <input class="email" type="email" id="emailLogin" placeholder="Email" required autocomplete="off" />
+          <input class="password" id="passwordLogin" type="password" placeholder="Password" required
+            autocomplete="off" />
+        </div>
+        <p id="warnNoExist"></p>
+        <div class="button-sign">
+          <button type="submit" id="login">Login</button>
+          <p>ó</p>
+          <button type="submit" id="loginGoogle">Login with Google</button>
+          <a id="signinView" href="#">Sign in</a>
+        </div>
+      </div>
+    </section>
+    <!--Fin inicio de sesión-->
+
+    <!-- Timeline -->
+    <section>
+      <div id="sectionTimeline" class="section-timeline-view"></div>
+    </section>
+    <!-- Fin timeline -->
+
+    <!--Gift loading-->
+    <section>
+      <div class="loader-gif" style="display: none">
+        <img src="img/loadign.gif" alt="Loading" />
+      </div>
+    </section>
+    <!--Fin gift loading-->
+
+    <!-- Post -->
+    <section id="formPostSection">
+      <div id="formPost" class="form-post">
+        <div id="closePagePost" class="close-page-post">
+          <div id="userHead" class="user-head1">
+            <img id="imagePostUser" src="img/Profile_placeholder.png" alt="profile image" />
+            <span id="UserNamePost"></span>
+          </div>
+          <p class="closePost">X</p>
+        </div>
+        <input id="placePost" class="place-post" type="text" placeholder="Indicate Place " autocomplete="off"
+          required />
+        <textarea id="descriptionPost" class="description-post" type="text" placeholder="Description Place"
+          autocomplete="off" required></textarea>
+        <div id="imgChosse">
+          <label class="file">
+            <input id="imgPost" class="img-post" type="file" capture="user" accept="image/*" />
+            <p id="choose">Choose image</p>
+          </label>
+        </div>
+        <p id="imageSelect"></p>
+        <p id="invalidPost"></p>
+        <button id="sendPost" class="send-Post" type="submit">Post</button>
+        <div class="logo-dow">
+          <img id="imgPost2" src="img/Logo.png" alt="image post" />
+          <h1>TERRA TOUR</h1>
+          <p>Tourism by your side</p>
+        </div>
+      </div>
+    </section>
+    <!-- Fin del post -->
+
+    <!--My profile-->
+    <section>
+      <div id="sectionMyProfile" class="my-profile-view"></div>
+    </section>
+    <!--Fin my profile-->
+
+    <!--Error 404-->
+    <section>
+      <div id="error404" class="error-404" style="display: none">
+        <div id="section404" class="section-404-view">404</div>
+      </div>
+    </section>
+
+    <!--Contenedor Menú-->
+    <div class="background-container">
+      <nav class="nav-container">
+        <div id="menuContainer" class="menu-container">
+          <div class="hamburger hamburger--spin">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+        </div>
+        <ul id="menuUList">
+          <li id="logOutButton" name="menuItem">
+            <a href="#">Log out</a>
+            <div class="hamburger">
+              <img src="img/boton-de-encendido.png" alt="Log out" />
+            </div>
+          </li>
+          <li id="myProfileButton" name="menuItem">
+            <a href="#">My profile</a>
+            <div class="hamburger">
+              <img src="img/usuario.png" alt="My profile" />
+            </div>
+          </li>
+          <li id="timelineButton" name="menuItem">
+            <a href="#">Timeline</a>
+            <div class="hamburger">
+              <img src="img/noticias.png" alt="Timeline" />
+            </div>
+          </li>
+          <li id="postButton" name="menuItem">
+            <a href="#">Post</a>
+            <div class="hamburger">
+              <img src="img/altavoz.png" alt="Post" />
+            </div>
+          </li>
+        </ul>
+    </div>
+    </nav>
+    </div>
+    <!--Fin contenedor Menú-->
+  </main>
+  <footer id="footer">
+    <div class="footer-bar">
+      <a href="#">Know us</a>
+      <p>&copy; Copyright Terra Tour 2020</p>
+    </div>
+  </footer>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <!--  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
+
+  <script>
+    // Configuración firebase de la página
+    var firebaseConfig = {
+      apiKey: "AIzaSyBATRlVdU4Jbt8AWCGCfQgrknUQKLAd8aQ",
+      authDomain: "red-social-terra-tour.firebaseapp.com",
+      databaseURL: "https://red-social-terra-tour.firebaseio.com",
+      projectId: "red-social-terra-tour",
+      storageBucket: "red-social-terra-tour.appspot.com",
+      messagingSenderId: "574900626741",
+      appId: "1:574900626741:web:aa5013c0275943f464987c",
+      measurementId: "G-YS6SX5V682",
+    };
+    // Inicializando Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const store = firebase.firestore();
+    const storage = firebase.storage();
+
+    /* firebase.analytics(); */
+  </script>
+
+  <script type="module" src="pages-javascript/form-view.js"></script>
+  <script type="module" src="pages-javascript/post.js"></script>
+  <script type="module" src="pages-javascript/timeline.js"></script>
+  <script type="module" src="pages-javascript/menu.js"></script>
+  <script type="module" src="pages-javascript/my-profile.js"></script>
+</body>
+
+</html>

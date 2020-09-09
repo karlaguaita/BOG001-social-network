@@ -1,0 +1,20 @@
+.error-404 {
+  width: 360px;
+  height: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #82bd7a40;
+}
+
+.section-404-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  font-size: 90px;
+  color: #ffff;
+  background-color: #094c33;
+  border-radius: 50%;
+}
